@@ -45,7 +45,7 @@ export class AuthService {
 
       // 2.- Guardar el usuario
 
-      return user
+      return user;
 
     }catch (error){
 

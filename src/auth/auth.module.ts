@@ -7,6 +7,7 @@ import { MongooseModule } from "@nestjs/mongoose";
 
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
+import { AuthGuard } from "./guards/auth.guard";
 
 @Module({
   controllers: [AuthController],
@@ -27,6 +28,7 @@ import { AuthController } from './auth.controller';
       secret: process.env.JWT_SEED,
       signOptions: { expiresIn: '1h'}
     })
-  ]
+  ],
+  exports: []
 })
 export class AuthModule {}

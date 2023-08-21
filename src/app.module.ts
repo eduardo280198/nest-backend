@@ -4,6 +4,7 @@ import { ConfigModule } from "@nestjs/config";
 import { MongooseModule } from "@nestjs/mongoose";
 
 import { AuthModule } from './auth/auth.module';
+import { AgendaModule } from './agenda/agenda.module';
 
 @Module({
   imports: [
@@ -11,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
 
     MongooseModule.forRoot(process.env.MONGO_URI), // Se conecta a la base de datos de mongoDb, proporcionandole la ip. Se debe de instalar la libreria correspondiente
 
-    AuthModule,
+    AuthModule, AgendaModule,
   ],
   controllers: [],
   providers: [],
