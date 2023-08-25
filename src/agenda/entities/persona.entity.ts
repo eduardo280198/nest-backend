@@ -18,7 +18,7 @@ export class Persona {
   @Prop( { required: true } )
   cellPhone : string;
 
-  @Prop( { required: true } )
+  @Prop(  )
   email     : string;
 
   @Prop( { required: true } )

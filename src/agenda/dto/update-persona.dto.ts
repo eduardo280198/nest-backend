@@ -3,6 +3,9 @@ import { IsString } from "class-validator";
 export class UpdatePersonaDto {
 
   @IsString()
+  _id       : string;
+
+  @IsString()
   name      : string;
 
   @IsString()
